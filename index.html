@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Map Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="builder.js" defer></script>
+</head>
+<body>
+    <div id="sidebar">
+        <h1>Map Builder</h1>
+        <div class="input-group">
+            <label>Couple's Names</label>
+            <input type="text" id="eventName" placeholder="e.g. Sarah & James">
+        </div>
+        <div class="input-group">
+            <label>Ceremony Address</label>
+            <input type="text" id="ceremonyAddr" placeholder="123 Church St...">
+        </div>
+        <div class="input-group">
+            <label>Reception Address</label>
+            <input type="text" id="receptionAddr" placeholder="456 Ballroom Rd...">
+        </div>
+        <button id="generateBtn" class="btn">1. Process with AI</button>
+        <button id="deployBtn" class="btn secondary" disabled>2. Launch to Netlify</button>
+    </div>
+    <div id="preview-area">
+        <div class="browser-mock">
+            <div class="browser-bar">Live Preview</div>
+            <div id="preview-frame">
+                <h2 id="preview-title">Your Wedding Map</h2>
+                <div id="dummy-map">Map will appear here</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
