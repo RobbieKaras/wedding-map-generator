@@ -4,7 +4,7 @@ exports.handler = async (event) => {
     try {
         const { addresses } = JSON.parse(event.body);
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
         const prompt = `Convert these addresses into JSON for Leaflet.js: ${addresses.join(", ")}. 
         Return ONLY a JSON object with "locations" (lat, lng, label) and "routes" (start, end, time, distance, link).`;
