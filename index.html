@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Map Builder (Manual Mode)</title>
+    <title>Wedding Map Builder</title>
     
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
     <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
@@ -36,8 +35,11 @@
     </div>
 
     <div id="preview-area">
-        <div id="preview-frame" style="height: 500px; width: 100%;">
-            </div>
+        <div class="preview-container">
+            <div class="preview-header">Live Preview</div>
+            <div id="preview-frame">
+                </div>
+        </div>
     </div>
 
     <script src="builder.js"></script>
