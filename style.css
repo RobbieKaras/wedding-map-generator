@@ -1,12 +1,72 @@
-body { display: flex; height: 100vh; margin: 0; font-family: sans-serif; background: #f4f4f4; }
-#sidebar { width: 350px; background: white; padding: 25px; border-right: 1px solid #ddd; box-shadow: 2px 0 5px rgba(0,0,0,0.05); }
-.input-group { margin-bottom: 20px; }
-label { display: block; font-weight: bold; font-size: 0.8rem; margin-bottom: 5px; }
-input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-.btn { width: 100%; padding: 12px; background: #A0522D; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; margin-top: 10px; }
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    height: 100vh;
+}
+
+#sidebar {
+    width: 350px;
+    padding: 30px;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    z-index: 10;
+}
+
+#preview-area {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+/* The New Map Box */
+.preview-container {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    border: 1px solid #d1d9e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.preview-header {
+    background: #f8fafd;
+    padding: 12px 20px;
+    border-bottom: 1px solid #d1d9e0;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #475467;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+}
+
+.preview-header::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #10b981; /* Live green dot */
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+}
+
+#preview-frame {
+    height: 550px;
+    width: 100%;
+}
+
+/* Button & Input Styling */
+.input-group { margin-bottom: 15px; }
+input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+.btn { 
+    width: 100%; padding: 12px; background: #a0522d; color: white; 
+    border: none; border-radius: 4px; cursor: pointer; font-weight: bold; 
+}
 .btn:disabled { background: #ccc; cursor: not-allowed; }
-.secondary { background: #25c2a0; }
-#preview-area { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 40px; }
-.browser-mock { width: 100%; height: 100%; background: white; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #ddd; display: flex; flex-direction: column; }
-.browser-bar { background: #eee; padding: 10px; text-align: center; font-size: 0.7rem; color: #666; }
-#preview-frame { flex-grow: 1; padding: 20px; text-align: center; }
+#status { margin: 10px 0; font-size: 0.9em; color: #666; }
