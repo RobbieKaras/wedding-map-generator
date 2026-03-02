@@ -1,11 +1,5 @@
 {
-  "name": "wedding-map-generator",
-  "version": "1.0.0",
-  "description": "AI-powered wedding map builder",
-  "main": "index.html",
   "dependencies": {
     "@google/generative-ai": "^0.21.0"
-  },
-  "author": "Robbie Karas",
-  "license": "MIT"
+  }
 }
