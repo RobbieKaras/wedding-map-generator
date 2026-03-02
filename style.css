@@ -1,8 +1,8 @@
 body {
     display: flex;
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: #f8fafc;
     height: 100vh;
 }
 
@@ -10,7 +10,7 @@ body {
     width: 350px;
     padding: 30px;
     background: white;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+    border-right: 1px solid #e2e8f0;
     z-index: 10;
 }
 
@@ -20,53 +20,86 @@ body {
     align-items: center;
     justify-content: center;
     padding: 40px;
+    /* Subtle dot grid background */
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 30px 30px;
 }
 
-/* The New Map Box */
 .preview-container {
     width: 100%;
     max-width: 900px;
     background: white;
-    border: 1px solid #d1d9e0;
+    border: 1px solid #cbd5e1;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
 .preview-header {
-    background: #f8fafd;
+    background: #f1f5f9;
     padding: 12px 20px;
-    border-bottom: 1px solid #d1d9e0;
+    border-bottom: 1px solid #cbd5e1;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
-    color: #475467;
+    color: #64748b;
     display: flex;
     align-items: center;
-    letter-spacing: 0.5px;
 }
 
 .preview-header::before {
     content: "";
     width: 8px;
     height: 8px;
-    background: #10b981; /* Live green dot */
+    background: #10b981;
     border-radius: 50%;
     margin-right: 10px;
-    box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
 }
 
 #preview-frame {
-    height: 550px;
+    height: 450px;
     width: 100%;
 }
 
-/* Button & Input Styling */
-.input-group { margin-bottom: 15px; }
-input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
-.btn { 
-    width: 100%; padding: 12px; background: #a0522d; color: white; 
-    border: none; border-radius: 4px; cursor: pointer; font-weight: bold; 
+/* Dashboard Styles */
+.preview-footer {
+    display: flex;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    padding: 20px;
 }
-.btn:disabled { background: #ccc; cursor: not-allowed; }
-#status { margin: 10px 0; font-size: 0.9em; color: #666; }
+
+.stat-card {
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #f1f5f9;
+}
+
+.stat-card:last-child { border-right: none; }
+
+.stat-label {
+    display: block;
+    font-size: 10px;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #a0522d;
+}
+
+/* Form Styling */
+.input-group { margin-bottom: 20px; }
+label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+input { width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; box-sizing: border-box; }
+.btn { 
+    width: 100%; padding: 12px; background: #a0522d; color: white; border: none; 
+    border-radius: 6px; cursor: pointer; font-weight: 700; transition: background 0.2s;
+}
+.btn:hover { background: #8b4513; }
+.btn:disabled { background: #cbd5e1; cursor: not-allowed; }
+#status { margin: 12px 0; font-size: 13px; color: #64748b; }
